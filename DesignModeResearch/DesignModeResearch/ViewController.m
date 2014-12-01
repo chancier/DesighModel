@@ -20,6 +20,7 @@
 
 @implementation ViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
@@ -39,6 +40,16 @@
     BaseClass *base1 = [model createBase];
     [base1 sthSelector];
     
+    
+    if ([BaseClass instancesRespondToSelector:@selector(sthString)])
+    {
+        NSLog(@"sthString yes");
+    }
+    
+    if ([BaseClass instancesRespondToSelector:@selector(sthSelector)])
+    {
+        NSLog(@"sthSelector yes");
+    }
     BaseClass *base2 = [model createBase];
     [base2 sthSelector];
     

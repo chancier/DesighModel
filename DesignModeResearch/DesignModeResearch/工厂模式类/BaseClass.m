@@ -10,4 +10,9 @@
 
 @implementation BaseClass
 
+-(void)sthSelector
+{
+    NSLog(@"do something!");
+}
+
 @end
